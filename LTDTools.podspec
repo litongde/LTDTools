@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LTDTools"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "LTD工具类简介2019年10月."
 
   # This description is used to generate tags and improve search results.
@@ -90,13 +90,17 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
-
-  # spec.public_header_files = "Classes/**/*.h"
-
-
+  
+  spec.public_header_files = "Classes/LTDTools.h"
+  spec.source_files  = "Classes/LTDTools.h"
+  
+  spec.subspec "LTDCategory" do |ca|
+    ca.public_header_files = "Classes/LTDCategory/*.h"
+    ca.source_files = "Classes/LTDCategory/*.{h,m}"
+  end
+  
+  # spec.exclude_files = "Classes/Exclude"
+  
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  A list of resources included with the Pod. These are copied into the
