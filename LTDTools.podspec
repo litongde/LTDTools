@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LTDTools"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   spec.summary      = "LTD工具类简介2019年10月."
 
   # This description is used to generate tags and improve search results.
@@ -53,10 +53,10 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "Eden" => "litongde@foxmail.com" }
-  # Or just: spec.author    = "Eden"
-  # spec.authors            = { "Eden" => "litongde@foxmail.com" }
-  # spec.social_media_url   = "https://twitter.com/Eden"
+  spec.author             = { "litongde" => "litongde@foxmail.com" }
+  # Or just: spec.author    = "litongde"
+  # spec.authors            = { "litongde" => "litongde@foxmail.com" }
+  # spec.social_media_url   = "https://twitter.com/litongde"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -91,12 +91,12 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
   
-  spec.public_header_files = "Classes/LTDTools.h"
-  spec.source_files  = "Classes/LTDTools.h"
+  spec.public_header_files = "LTDTools/LTDTools.h"
+  spec.source_files  = "LTDTools/LTDTools.h"
   
-  spec.subspec "LTDCategory" do |ca|
-    ca.public_header_files = "Classes/LTDCategory/*.h"
-    ca.source_files = "Classes/LTDCategory/*.{h,m}"
+  spec.subspec "LTDCategory" do |ss|
+    ss.source_files = "LTDTools/LTDCategory/*.{h,m}"
+    ss.public_header_files = "LTDTools/LTDCategory/*.h"
   end
   
   # spec.exclude_files = "Classes/Exclude"
@@ -134,7 +134,7 @@ Pod::Spec.new do |spec|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # spec.requires_arc = true
+  spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
